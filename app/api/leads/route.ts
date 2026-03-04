@@ -10,15 +10,14 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Missing data' }, { status: 400 });
     }
 
-    const { data, error } = await supabase
+    const { error } = await supabase
       .from('leads')
       .insert([
         { 
           email: email, 
           result_neighborhood: result_neighborhood
         }
-      ])
-      .select();
+      ]);
 
     if (error) {
       console.error('Supabase error:', error);
