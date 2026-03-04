@@ -97,6 +97,29 @@ export default function SeoulSoulQuiz() {
   const [scores, setScores] = useState({ Seongsu: 0, Hannam: 0, Hongdae: 0, Euljiro: 0, Gangnam: 0 });
   const [email, setEmail] = useState("");
   const [result, setResult] = useState(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmitEmail = async () => {
+    if (!email) return;
+    setIsSubmitting(true);
+    try {
+      const response = await fetch('/api/leads', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, result_neighborhood: result.title }),
+      });
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        console.error("Failed to submit email");
+      }
+    } catch (error) {
+      console.error("Error submitting email:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   const handleAnswer = (weights) => {
     const newScores = { ...scores };
@@ -199,19 +222,33 @@ export default function SeoulSoulQuiz() {
 
         {/* Email Capture */}
         <div className="border-4 border-black p-6 mb-8 bg-pink-100 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-          <p className="font-black mb-4 text-lg">WANT THE FULL NEIGHBORHOOD GUIDE?</p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <input 
-              type="email" 
-              placeholder="YOUR@EMAIL.COM" 
-              className="flex-1 border-4 border-black p-3 font-bold placeholder:text-gray-400 focus:outline-none focus:ring-4 ring-yellow-400"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <button className="bg-black text-white px-6 py-3 font-black hover:bg-gray-800 flex items-center justify-center gap-2">
-              SEND ME <Send size={20} />
-            </button>
-          </div>
+          {submitted ? (
+            <div className="text-center py-4">
+              <p className="text-2xl font-black text-green-600 mb-2">YOU'RE IN!</p>
+              <p className="font-bold">Check your inbox for the guide soon.</p>
+            </div>
+          ) : (
+            <>
+              <p className="font-black mb-4 text-lg">WANT THE FULL NEIGHBORHOOD GUIDE?</p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <input 
+                  type="email" 
+                  placeholder="YOUR@EMAIL.COM" 
+                  className="flex-1 border-4 border-black p-3 font-bold placeholder:text-gray-400 focus:outline-none focus:ring-4 ring-yellow-400"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  disabled={isSubmitting}
+                />
+                <button 
+                  onClick={handleSubmitEmail}
+                  disabled={isSubmitting}
+                  className="bg-black text-white px-6 py-3 font-black hover:bg-gray-800 disabled:bg-gray-400 flex items-center justify-center gap-2"
+                >
+                  {isSubmitting ? "SENDING..." : "SEND ME"} <Send size={20} />
+                </button>
+              </div>
+            </>
+          )}
         </div>
 
         {/* Social Share */}
