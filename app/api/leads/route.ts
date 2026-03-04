@@ -15,8 +15,7 @@ export async function POST(request: Request) {
       .insert([
         { 
           email: email, 
-          result_neighborhood: result_neighborhood,
-          created_at: new Date().toISOString()
+          result: result_neighborhood
         }
       ])
       .select();

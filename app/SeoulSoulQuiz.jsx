@@ -112,7 +112,8 @@ export default function SeoulSoulQuiz() {
       if (response.ok) {
         setSubmitted(true);
       } else {
-        console.error("Failed to submit email");
+        const errorData = await response.json();
+        console.error("Failed to submit email:", errorData.error || "Unknown error");
       }
     } catch (error) {
       console.error("Error submitting email:", error);
