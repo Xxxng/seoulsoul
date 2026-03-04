@@ -1,3 +1,4 @@
+'use client';
 import React, { useState } from 'react';
 import { Check, Share2, Mail, ArrowRight, MapPin, Sparkles, Send, Twitter, MessageSquare } from 'lucide-react';
 
