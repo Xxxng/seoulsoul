@@ -102,11 +102,39 @@ export default function SeoulSoulQuiz() {
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmitEmail = async () => {
-    // ... (기존 로직 동일)
+    if (!email) return;
+    setIsSubmitting(true);
+    try {
+      const response = await fetch('/api/leads', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, result_neighborhood: result.title }),
+      });
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        const errorData = await response.json();
+        console.error("Failed to submit email:", errorData.error || "Unknown error");
+      }
+    } catch (error) {
+      console.error("Error submitting email:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleAnswer = (weights) => {
-    // ... (기존 로직 동일)
+    const newScores = { ...scores };
+    Object.keys(weights).forEach(key => {
+      newScores[key] += weights[key];
+    });
+    setScores(newScores);
+
+    if (currentIdx < QUIZ_DATA.questions.length - 1) {
+      setCurrentIdx(currentIdx + 1);
+    } else {
+      calculateResult(newScores);
+    }
   };
 
   const calculateResult = (finalScores) => {
