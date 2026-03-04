@@ -1,0 +1,191 @@
+{
+  "test_title": "Seoul Neighborhood Match for Digital Nomads",
+  "questions": [
+    {
+      "id": 1,
+      "question": "How do you prefer to start your productive morning?",
+      "options": [
+        {
+          "text": "In a sleek, high-rise coworking space with a city view.",
+          "weights": { "Seongsu": 1, "Hannam": 1, "Hongdae": 0, "Euljiro": 0, "Gangnam": 5 }
+        },
+        {
+          "text": "Grabbing a specialty coffee in a converted warehouse or industrial loft.",
+          "weights": { "Seongsu": 5, "Hannam": 1, "Hongdae": 1, "Euljiro": 3, "Gangnam": 0 }
+        },
+        {
+          "text": "A quiet walk through a sophisticated, hilly residential village.",
+          "weights": { "Seongsu": 1, "Hannam": 5, "Hongdae": 1, "Euljiro": 0, "Gangnam": 2 }
+        },
+        {
+          "text": "In a vibrant cafe surrounded by students and street art.",
+          "weights": { "Seongsu": 1, "Hannam": 0, "Hongdae": 5, "Euljiro": 1, "Gangnam": 0 }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "question": "What kind of 'after-work' vibe are you looking for?",
+      "options": [
+        {
+          "text": "Exploring hidden 'Newtro' (new + retro) bars in narrow alleys.",
+          "weights": { "Seongsu": 2, "Hannam": 1, "Hongdae": 2, "Euljiro": 5, "Gangnam": 0 }
+        },
+        {
+          "text": "A world-class dining experience or a wine bar with an international crowd.",
+          "weights": { "Seongsu": 1, "Hannam": 5, "Hongdae": 0, "Euljiro": 0, "Gangnam": 3 }
+        },
+        {
+          "text": "Live indie music, street performances, and affordable drinks.",
+          "weights": { "Seongsu": 1, "Hannam": 0, "Hongdae": 5, "Euljiro": 1, "Gangnam": 0 }
+        },
+        {
+          "text": "High-end shopping followed by a gym session in a luxury complex.",
+          "weights": { "Seongsu": 0, "Hannam": 2, "Hongdae": 0, "Euljiro": 0, "Gangnam": 5 }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Which aesthetic inspires your creativity the most?",
+      "options": [
+        {
+          "text": "Raw concrete, exposed brick, and artisanal craftsmanship.",
+          "weights": { "Seongsu": 5, "Hannam": 1, "Hongdae": 2, "Euljiro": 3, "Gangnam": 0 }
+        },
+        {
+          "text": "Polished glass, neon lights, and futuristic architecture.",
+          "weights": { "Seongsu": 1, "Hannam": 1, "Hongdae": 1, "Euljiro": 0, "Gangnam": 5 }
+        },
+        {
+          "text": "Minimalist luxury, art galleries, and quiet greenery.",
+          "weights": { "Seongsu": 2, "Hannam": 5, "Hongdae": 0, "Euljiro": 0, "Gangnam": 2 }
+        },
+        {
+          "text": "DIY posters, colorful murals, and quirky vintage shops.",
+          "weights": { "Seongsu": 2, "Hannam": 0, "Hongdae": 5, "Euljiro": 2, "Gangnam": 0 }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "question": "What is your priority when choosing a 'work-from-anywhere' spot?",
+      "options": [
+        {
+          "text": "A community of tech entrepreneurs and fast-paced networking.",
+          "weights": { "Seongsu": 3, "Hannam": 1, "Hongdae": 0, "Euljiro": 0, "Gangnam": 5 }
+        },
+        {
+          "text": "A place where I can easily blend in as an expat or English speaker.",
+          "weights": { "Seongsu": 1, "Hannam": 5, "Hongdae": 3, "Euljiro": 0, "Gangnam": 2 }
+        },
+        {
+          "text": "Affordability and a high density of 24-hour options.",
+          "weights": { "Seongsu": 1, "Hannam": 0, "Hongdae": 5, "Euljiro": 3, "Gangnam": 0 }
+        },
+        {
+          "text": "An authentic local experience that feels like 'Old Seoul'.",
+          "weights": { "Seongsu": 2, "Hannam": 0, "Hongdae": 1, "Euljiro": 5, "Gangnam": 0 }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "question": "How do you prefer to spend your Saturday afternoon?",
+      "options": [
+        {
+          "text": "Picnicking in a large forest park right next to trendy pop-up stores.",
+          "weights": { "Seongsu": 5, "Hannam": 2, "Hongdae": 1, "Euljiro": 0, "Gangnam": 1 }
+        },
+        {
+          "text": "Browsing designer boutiques and visiting a private museum.",
+          "weights": { "Seongsu": 2, "Hannam": 5, "Hongdae": 0, "Euljiro": 0, "Gangnam": 3 }
+        },
+        {
+          "text": "Hunting for unique stationery and vintage clothes in crowded markets.",
+          "weights": { "Seongsu": 2, "Hannam": 0, "Hongdae": 5, "Euljiro": 3, "Gangnam": 0 }
+        },
+        {
+          "text": "Attending a global tech conference or visiting a massive underground mall.",
+          "weights": { "Seongsu": 1, "Hannam": 1, "Hongdae": 0, "Euljiro": 0, "Gangnam": 5 }
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "question": "Pick your ideal 'Nomad Fuel' lunch:",
+      "options": [
+        {
+          "text": "A healthy grain bowl or trendy brunch in a minimalist cafe.",
+          "weights": { "Seongsu": 4, "Hannam": 5, "Hongdae": 2, "Euljiro": 0, "Gangnam": 3 }
+        },
+        {
+          "text": "Classic Korean street food or spicy rice cakes on a budget.",
+          "weights": { "Seongsu": 1, "Hannam": 0, "Hongdae": 5, "Euljiro": 4, "Gangnam": 1 }
+        },
+        {
+          "text": "A quick, efficient meal at a high-end salad bar near the office.",
+          "weights": { "Seongsu": 1, "Hannam": 2, "Hongdae": 0, "Euljiro": 0, "Gangnam": 5 }
+        },
+        {
+          "text": "A steaming bowl of noodles in a gritty, traditional local market.",
+          "weights": { "Seongsu": 2, "Hannam": 0, "Hongdae": 2, "Euljiro": 5, "Gangnam": 0 }
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "question": "What is your preferred mode of transportation around the neighborhood?",
+      "options": [
+        {
+          "text": "Walking through green parks and pedestrian-friendly streets.",
+          "weights": { "Seongsu": 5, "Hannam": 3, "Hongdae": 4, "Euljiro": 1, "Gangnam": 0 }
+        },
+        {
+          "text": "Using a sleek electric scooter or the ultra-efficient subway lines.",
+          "weights": { "Seongsu": 2, "Hannam": 1, "Hongdae": 2, "Euljiro": 2, "Gangnam": 5 }
+        },
+        {
+          "text": "Taxis or private cars to avoid the hills and maintain privacy.",
+          "weights": { "Seongsu": 0, "Hannam": 5, "Hongdae": 0, "Euljiro": 0, "Gangnam": 4 }
+        },
+        {
+          "text": "I don't mind getting lost in a maze of winding alleyways on foot.",
+          "weights": { "Seongsu": 3, "Hannam": 2, "Hongdae": 4, "Euljiro": 5, "Gangnam": 0 }
+        }
+      ]
+    }
+  ],
+  "neighborhood_results": {
+    "Seongsu": {
+      "neighborhood": "Seongsu-dong",
+      "vibe": "The 'Brooklyn of Seoul'. An industrial district turned creative hub where red-brick factories house tech startups and world-class cafes.",
+      "top_3_hot_spots": ["Seoul Forest", "Daelim Changgo", "LCDC Seoul"],
+      "nomad_tip": "Safety/Internet: Exceptionally safe with many 'work-friendly' cafes. Wi-Fi is blazing fast, and the community is full of young entrepreneurs."
+    },
+    "Hannam": {
+      "neighborhood": "Hannam-dong",
+      "vibe": "Sophisticated, global, and hilly. This is where international diplomats and celebrities live, offering a refined blend of art galleries and boutique dining.",
+      "top_3_hot_spots": ["Leeum Museum of Art", "Sounds Hannam", "Hannam-dong Cafe Street"],
+      "nomad_tip": "Safety/Internet: Very quiet and prestigious. Internet is reliable, but many cafes are 'Instagram-focused' and might have limited seating for long laptop sessions."
+    },
+    "Hongdae": {
+      "neighborhood": "Hongdae / Yeonnam-dong",
+      "vibe": "Youthful, rebellious, and artistic. Home to indie music, street fashion, and a 24/7 energy that never sleeps.",
+      "top_3_hot_spots": ["Gyeongui Line Forest Park", "Hongdae Free Market", "Yeonnam-dong Alleys"],
+      "nomad_tip": "Safety/Internet: Great for budget-conscious nomads. Countless 24-hour cafes with solid Wi-Fi. It can be loud, so noise-canceling headphones are a must."
+    },
+    "Euljiro": {
+      "neighborhood": "Euljiro (Hipjiro)",
+      "vibe": "Where the 1970s meet 2026. A gritty maze of printing shops and hardware stores that hide the city's trendiest speakeasies and retro cafes.",
+      "top_3_hot_spots": ["Sewoon Plaza", "Coffee Hanyakbang", "Nogari Alley"],
+      "nomad_tip": "Safety/Internet: Authentic but can be chaotic. Internet is generally good, but 'hidden' spots might have spotty signals. Perfect for those who want to avoid tourists."
+    },
+    "Gangnam": {
+      "neighborhood": "Gangnam-gu",
+      "vibe": "The beating heart of modern Korea. High-speed, high-tech, and high-fashion. Everything is polished, efficient, and professional.",
+      "top_3_hot_spots": ["Starfield Library", "Bongeunsa Temple", "Gangnam Station Shopping Area"],
+      "nomad_tip": "Safety/Internet: The best coworking infrastructure in Seoul. Public Wi-Fi is everywhere. It’s corporate and busy, so expect a 'hustle' culture."
+    }
+  }
+}
