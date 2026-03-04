@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { Check, Share2, Mail, ArrowRight, MapPin, Sparkles, Send, Twitter, MessageSquare } from 'lucide-react';
+import { Check, Share2, Mail, ArrowRight, MapPin, Sparkles, Send, Twitter, MessageSquare, Loader2 } from 'lucide-react';
 
 // Quiz Data based on previous generation
 const QUIZ_DATA = {
@@ -243,9 +243,17 @@ export default function SeoulSoulQuiz() {
                 <button 
                   onClick={handleSubmitEmail}
                   disabled={isSubmitting}
-                  className="bg-black text-white px-6 py-3 font-black hover:bg-gray-800 disabled:bg-gray-400 flex items-center justify-center gap-2"
+                  className="bg-black text-white px-6 py-3 font-black hover:bg-gray-800 disabled:bg-gray-400 flex items-center justify-center gap-2 min-w-[140px]"
                 >
-                  {isSubmitting ? "SENDING..." : "SEND ME"} <Send size={20} />
+                  {isSubmitting ? (
+                    <>
+                      SAVING... <Loader2 size={20} className="animate-spin" />
+                    </>
+                  ) : (
+                    <>
+                      SEND ME <Send size={20} />
+                    </>
+                  )}
                 </button>
               </div>
             </>
