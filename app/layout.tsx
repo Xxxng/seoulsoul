@@ -15,9 +15,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Seoul Soul Match | Find Your Perfect Seoul Neighborhood",
-  description: "Discover which Seoul neighborhood fits your personality and lifestyle. A fun, interactive guide for digital nomads, expats, and travelers looking for their perfect spot in Seoul.",
-  keywords: ["Seoul", "Korea Travel", "Digital Nomad", "Seoul Neighborhoods", "Expats in Seoul", "Gangnam", "Hannam", "Hongdae", "Seongsu", "Euljiro"],
+  title: "Seoul Soul Match | The Definitive Guide to Seoul Neighborhoods",
+  description: "Discover which Seoul neighborhood fits your unique personality and lifestyle. An expert-curated guide for digital nomads, expats, and urban explorers looking for their perfect spot in Seoul. Updated 2026.",
+  keywords: ["Seoul Neighborhood Guide", "Living in Seoul", "Digital Nomad Seoul", "Seoul District Analysis", "Gangnam", "Hannam", "Hongdae", "Seongsu", "Euljiro"],
+  authors: [{ name: "SeoulSoul Expert Team" }],
   other: {
     "google-adsense-account": "ca-pub-3625148910460381",
   },
@@ -28,6 +29,36 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Structured Data for Google (E-E-A-T)
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Seoul Soul Match",
+    "url": "https://seoulsoulmatch.com",
+    "description": "Expert-curated guide to Seoul neighborhoods based on lifestyle and urban data.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "SeoulSoul Team",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://seoulsoulmatch.com/logo.png"
+      }
+    },
+    "mainEntity": {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the best neighborhood in Seoul for digital nomads?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Seongsu-dong and Hongdae are top choices due to their creative atmosphere and coworking infrastructure."
+          }
+        }
+      ]
+    }
+  };
+
   return (
     <html lang="en">
       <head>
@@ -36,6 +67,10 @@ export default function RootLayout({
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3625148910460381"
           crossOrigin="anonymous"
         ></script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col font-mono`}
