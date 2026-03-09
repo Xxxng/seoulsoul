@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { QUIZ_DATA } from '../../../lib/data';
-import { MapPin, ArrowRight, Sparkles, CheckCircle, AlertCircle, Star, Lightbulb } from 'lucide-react';
+import { MapPin, ArrowRight, Sparkles, CheckCircle, AlertCircle, Star, Lightbulb, BookOpen } from 'lucide-react';
 
 export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
   const { id } = params;
